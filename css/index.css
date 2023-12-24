@@ -187,7 +187,7 @@ body{
 .miaosha{
     width: 100%;
     height: 260px;
-    background-color: #e2231a;
+    /* background-color: beige; */
     margin-bottom: 20px;
 }
 .youxuan{
@@ -395,6 +395,333 @@ background: linear-gradient(90deg,#FFF4D2,#FFECB6);;
     margin: 10px auto 0 ;
 
 }
+.person-left{
+    width: 100px;
+    font-style: normal;
+}
+.title{
+    margin-top: 6px;
+    margin-left: 8px;
+    color: #663300;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+.title_detail{
+    margin-left: 8px;
+    color: #A88100;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+}
+.person-right{
+    display: block;
+    color: #663300;
+    line-height: 29px;
+    font-size: 12px;
+
+}
+.enter-title{
+    margin-top: 6px;
+    margin-left: 8px;
+    color: #3161E2;
+    font-weight: 600;
+    font-size: 14px;
+}
+.enter-right{
+    display: block;
+    color: #3161E2;
+    line-height: 29px;
+    font-size: 12px;
+}
+.now {
+    font-size: 11px;
+    font-weight: 400;
+}
+.enter-now{
+    font-size: 11px;
+    font-weight: 400;
+    color: #3161E2;
+}
+.enter-title_detail{
+    margin-left: 8px;
+    color: rgba(49,97,226,.7);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+}
+.enter-left{
+    width: 100px;
+    font-style: normal;
+}
+.service{
+    overflow: hidden;
+    position: relative;
+    height: 238px;
+    width: 100%;
+
+}
+.service-entry{
+    overflow: hidden;
+    padding: 5px 0.5px;
+    background-color: #fff;
+}
+.service-ul{
+    padding-top: 5px;
+    height: 225px;
+}
+.service-ul li{
+ list-style: none;
+}
+.service-item{
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 55px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+.service-icon{
+    display: block;
+    width: 28px;
+    height: 28px;
+   
+    margin: 0 auto;
+}
+.service-icon-img{
+    
+    width: 28px;
+    height: 28px;
+   
+}
+.service-lk{
+    display: block;
+
+}
+.service-txt{
+    height: 25px;
+    color: #333;
+    line-height: 25px;
+    border-bottom: 2px solid #fff;
+    font-size: 12px;
+
+}
+.news{
+    height: 30px;
+    background-color: #fff;
+}
+.news-info{
+    height: 16px;
+    margin: -2px 15px 8px;
+}
+.news-item{
+    max-width: 160px;
+    height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #999;
+    margin-bottom: 6px;
+}
+.news-item a{
+    font-size: 12px;
+    color: #666;
+}
+.news-tag{
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    height: 16px;
+    width: 35px;
+    line-height: 16px;
+    text-align: center;
+    vertical-align: 0;
+    color: #e1251b;
+    background-color: rgba(225,37,27,.08);
+    margin-right: 6px;
+}
+.seckill{
+   width: 1190px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.seckill_inner{
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.seckill-countdown{
+    float: left;
+    width: 190px;
+    height: 100%;
+    color: #fff;
+   background-color: #e83632;
+    background: url(./../images/4a15d8883775742e3efbb850ae14def7.png) no-repeat;
+    background-size: contain;
+    background-position: 50%;
+   
+
+}
+.seckill-title{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 31px;
+}
+.countdown-desc{
+    margin-top: 90px;
+    font-size: 14px;
+    text-align: center;
+}
+.countdown-desc strong{
+    font-size: 18px;
+    padding-right: 2px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -1px;
+    font-weight: bold;
+}
+.timmer{
+    color: #333;
+    font-weight: 700;
+}
+.countdown-main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    height: 30px;
+    margin-top: 10px;
+    display: block;
+}
+.timmer-unit{
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #2f3430;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+}
+.timmer-unit::after{
+    content: ":";
+    display: block;
+    position: absolute;
+    right: -20px;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 20px;
+    height: 100%;
+    top: 0
+}
+.hour{
+    padding-top: 1px;
+}
+.timmer-unit-final{
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #2f3430;
+   
+    color: white;
+    font-size: 20px;
+}
+.minute,.hour,.second{
+    padding-top: 4px;
+}
+.seckill-list{
+    float: left;
+    width: 800px;
+    height: 100%;
+    overflow: hidden;
+}
+.seckill-item{
+    position: relative;
+    width: 200px;
+    height: 260px;
+    display: inline-block;
+}
+.seckill_item{
+    height: 100%;
+    min-height: 1px;
+}
+.seckill-item_image{
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.lazyimg-loaded{
+    background: transparent;
+}
+.seckill-item_name{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    -webkit-transition: color .2s ease;
+    transition: color .2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+}
+.seckill-item-price{
+    position: relative;
+    
+    box-sizing: border-box;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: center;
+    width: 160px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+}
+.price{
+    height: 100%;
+    width: 66px;
+    background: #fff;
+    text-align: center;
+    color: #e1251b;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.price i{
+    font-style: normal;
+}
+.seckill_entry{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 260px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.seckill_entry img{
+    width: 100%;
+    height: 100%;
+
+/* body{
+
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+} */
+
 
 
 

@@ -124,6 +124,26 @@ slide.onmouseout=function () {
     },2000)
 
 }
+recommendImge2.onmouseout=function(){
+    recommendTimer=setInterval(function () {
+        recommendCount++
+        if(recommendCount>recommendImge1Arr.length-1){
+            recommendCount=0
+        }
+        recommendImgChange()
+    },2000)
+
+}
+recommendImge3.onmouseout=function(){
+    recommendTimer=setInterval(function () {
+        recommendCount++
+        if(recommendCount>recommendImge1Arr.length-1){
+            recommendCount=0
+        }
+        recommendImgChange()
+    },2000)
+
+}
  
  let lis = document.querySelectorAll('.banner-btn li')
  //给li绑定点击时间
@@ -209,4 +229,25 @@ document.onscroll=function () {
     loadNickName()
     
  }
+ //秒杀倒计时
+ let hour = document.querySelector('.hour').innerText
+ let Rminute = document.querySelector('.minute')
+ let Rsecond = document.querySelector(".second")
+ let minute = document.querySelector('.minute').innerText
+ let second = document.querySelector(".second").innerText
+ let seckillTimer=setInterval(function(){
+    if(second>0) {
+        
+        second--
+        Rsecond.innerHTML=second
+        
+        
+    }
+    if(second==0) {
+        minute--
+        Rminute.innerHTML=minute
+        second=59
+        Rsecond.innerHTML=second
+    }
+ },1000)
 
