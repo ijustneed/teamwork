@@ -30,20 +30,44 @@ function clearColor() {
 let img = document.querySelector('.img')
 let imgArr=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg']
 let count=0;
+let recommendCount=0;
+let recommendImge1=document.querySelector('.recommend-img1')
+let recommendImge2=document.querySelector('.recommend-img2')
+let recommendImge3=document.querySelector('.recommend-img3')
+let recommendImge1Arr=['shouji.png.avif','shouji2.png.avif']
+let recommendImge2Arr=['qingjie.png.avif','kouzhao.png.avif']
+let recommendImge3Arr=['biao.png.avif','napkin.png.avif']
 //定义函数切换图片路径
 function cutImg() {
     img.src='./images/'+imgArr[count];
+  
     for(let i =0;i<lis.length;i++) {
         lis[i].className=""
     }
     lis[count].className='active'
 
+}
+  //推荐 图片切换
+  function recommendImgChange() {
+    recommendImge1.src='./images/'+recommendImge1Arr[recommendCount];
+    recommendImge2.src='./images/'+recommendImge2Arr[recommendCount];
+    recommendImge3.src='./images/'+recommendImge3Arr[recommendCount];
   }
+  let recommendTimer=setInterval(function () {
+    recommendCount++
+    if(recommendCount>recommendImge1Arr.length-1){
+        recommendCount=0
+    }
+    recommendImgChange()
+    
+  },2000)
 let timer = setInterval(function () {  
     count++;
+   
     if(count>imgArr.length-1) {
         count=0;
     }
+    
     cutImg();
 },2000)
 let prev = document.querySelector('.prev')
@@ -62,21 +86,45 @@ prev.onclick=function () {
     }
     cutImg();
 }
+
 let slide =document.querySelector('.slide')
 //鼠标划入div 将定时器暂停
 slide.onmouseover=function () {
    clearInterval(timer)
   }
+recommendImge1.onmouseover=function() {
+    clearInterval(recommendTimer)
+}
+recommendImge2.onmouseover=function() {
+    clearInterval(recommendTimer)
+}
+recommendImge3.onmouseover=function() {
+    clearInterval(recommendTimer)
+}
 //鼠标划出div 定时器重开
 slide.onmouseout=function () { 
     timer = setInterval(function () {  
         count++;
+       
+        
         if(count>imgArr.length-1) {
             count=0;
         }
+        
         cutImg();
     },2000)
  }
+ recommendImge1.onmouseout=function(){
+    recommendTimer=setInterval(function () {
+        recommendCount++
+        if(recommendCount>recommendImge1Arr.length-1){
+            recommendCount=0
+        }
+        recommendImgChange()
+    },2000)
+
+}
+ 
  let lis = document.querySelectorAll('.banner-btn li')
  //给li绑定点击时间
  for(let i = 0;i<lis.length;i++) {
@@ -85,7 +133,15 @@ slide.onmouseout=function () {
         cutImg();
     }
  }
+ //获取用户昵称
 
+ let nickname = window.localStorage.getItem('nickname')
+ let miaosha = document.querySelector('.miaosha')
+ let search = document.querySelector('.search')
+ let searchM = document.querySelector('.search-m')
+ let form = document.querySelector('.form')
+ let searchLogo = document.querySelector('.search_logo')
+ //楼层滚动 文字变色
  let header = document.querySelector('.header')
  let banner = document.querySelector('.banner')
  let elevator = document.querySelector('.elevator')
@@ -107,14 +163,22 @@ slide.onmouseout=function () {
 
 //实现楼层的定位切换
 document.onscroll=function () { 
+    //获取到滚动条垂直方向滚动了多少
     let top = document.documentElement.scrollTop || document.body.scrollTop;
     let headerHeight = header.offsetHeight;
     let bannerHeight = banner.offsetHeight;
     //当滚动条滚动到一定程度时 ele固定在固定位置
     if(top>=headerHeight+bannerHeight) {
       elevator.className='elevator elevator-fix'
+      search.className="search search-fix"
+      searchM.style.height="50px"
+      form.style.top = "8px"
+      searchLogo.style.display='block'
     }else{
         elevator.className='elevator'
+        search.className='search'
+        searchM.style.height="60px"
+        searchLogo.style.display='none'
     }
     if(top<header.offsetHeight+banner.offsetHeight) {
         clearColor()
@@ -137,4 +201,12 @@ document.onscroll=function () {
         elevatorA[3].style.color = 'red'
     }
  }
- //楼层滚动 文字变色
+ window.onloa=function() {
+    function loadNickName() {
+     miaosha.innerHTML='<p>'+nickname+'</p>'
+        
+    }
+    loadNickName()
+    
+ }
+

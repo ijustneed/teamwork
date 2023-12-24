@@ -2,7 +2,7 @@
     width: 100%;
     height: 140px;
     border-bottom:  1px solid #ddd;
-    background-color: yellow;
+    
 }
 .wrap{
     width: 1190px;
@@ -11,8 +11,7 @@
 .header-box{
     position: relative;
     height: 140px;
-    background-color: blue;
-
+   
 }
 .logo{
     left: 0;
@@ -36,7 +35,8 @@
 .search-m{
     position: relative;
     height: 60px;
-    width: 100%;
+    width: 1190px;
+    margin: 0 auto;
 }
 .search_logo{
     display: none;
@@ -45,6 +45,8 @@
     left: 0;
     width: 125px;
     height: 40px;
+    background: url(./../images/sprite.png) no-repeat;
+    background-position: 0 -120px;
 }
 .form{
     position: absolute;
@@ -104,6 +106,7 @@
     color: #666;
 }
 .banner{
+
     width: 100%;
     height: 470px;
     padding-top: 10px;
@@ -118,18 +121,22 @@ body{
    
 }
 .banner-slice{
+    float: left;
     width: 790px;
     height: 470px;
     margin: 0 auto;
     
 }
 .slide{
+    float: left;
     position: relative;
     width: 590px;
     height: 470px;
     background-color: #fff;
 }
 .prev,.next{
+    color: #ccc;
+    text-align: center;
     width: 25px;
     height: 35px;
     position: absolute;
@@ -233,3 +240,162 @@ body{
     }
     
 }
+.search-fix{
+    z-index: 100;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #f10214;
+    background-color: #fff;
+    box-shadow:  2px 2px rgba(0,0,0,.2);
+    animation: searchTop .5s ease-in-out;
+}
+@keyframes searchTop {
+    0%{
+        top: -50px;
+    }
+    100%{
+        top:0
+    }
+    
+}
+.menu{
+overflow: hidden;
+height: 470px;
+
+margin-right: 10px;
+
+width: 190px;
+float: left;
+}
+.item-recommend{
+    float: left;
+    height: 470px;
+   
+    
+    width: 190px;
+    margin-left: 10px;
+    
+}
+.func-right{
+    position: relative;
+    float: right;
+    width: 190px;
+    height: 470px;
+    z-index: 1;
+    background-color: #e1251b;
+}
+.cate-menu{
+    overflow: hidden;
+   
+    height: 470px;
+    background-color: #fefefe;
+    color: #363636;
+    
+  
+}
+.cate-menu-item{
+    padding-top: 10px;
+        
+        overflow: hidden;
+        height: 25px;
+        line-height: 25px;
+        padding-left: 18px;
+        font-size: 0;
+        transition: background-color .2s ease;
+}
+.cate-menu-lk{
+    font-size: 14px;
+    color: #333;
+    transition: color .2s ease;
+}
+.cate-menu-lk a{
+  
+   text-decoration: none;
+}
+.focus-item-recommend{
+    height: 150px;
+    margin-bottom: 10px;
+   
+}
+.focus-item-recommend img{
+   
+   width: 100%;
+   height: 100%;
+}
+.user{
+    
+    height: 204px;
+    background: #fff;
+}
+.service{
+    overflow: hidden;
+    height: 238px;
+    background-color: cadetblue;
+}
+.news {
+    height: 30px;
+    background-color: chocolate;
+}
+.avatar{
+    width: 40px;
+    margin: 0 auto;
+    position: relative;
+    height: 40px;
+    display: block;
+   
+}
+.avatar img{
+    position: absolute;
+    top: 8px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.user-show{
+    margin: 12px 0 8px;
+
+}
+.welcome{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 20px;
+    font-style: normal;
+    
+}
+.welcome a{
+    color: #666;
+    text-decoration: none;
+
+}
+.user-vip{
+
+}
+.personal-vip{
+width: 166px;
+height: 45px;
+display: flex;
+overflow: hidden;
+border-radius: 4px;
+margin: 10px auto 0 ;
+background: linear-gradient(90deg,#FFF4D2,#FFECB6);;
+}
+.enterprise-vip{
+    width: 166px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 4px;
+    background: #E0E8F8;
+    margin: 10px auto 0 ;
+
+}
+
+
+
+
