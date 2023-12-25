@@ -903,7 +903,70 @@ background: linear-gradient(90deg,#FFF4D2,#FFECB6);;
     float: right;
     padding-top: 3px;
 }
+.mod-service{
+    padding: 30px 0;
+    border-bottom: 1px solid #dedede;
+}
+.mod-service-inner{
+    
+}
+.service-list{
+    overflow: hidden;
+    height: 42px
+}
+.mod-service-item{
+    float: left;
+    width: 297px;
+}
+.mod-service-unit{
+    position: relative;
+    margin: 0 auto;
+    padding-left: 45px;
+    width: 180px;
+}
+.duo{
+    background-repeat: no-repeat;
+    background-position: 0 -192px;
+    background: url(../images/cc1d8d291ea917c0.png);
+    
 
+
+}
+.kuai{
+    background-repeat: no-repeat;
+    background-position: -41px -192px;
+
+   
+    
+}
+.duo-tit{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 42px;
+    text-indent: -999px;
+}
+.mod-service-txt{
+    overflow: hidden;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+}
+
+.clearfix::after{
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
 
 /* .youxuan{
     height: 980px;

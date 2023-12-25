@@ -8,6 +8,8 @@ let mianImg=document.querySelector(".main-img")
 let zoomPup=document.querySelector('.zoom-pup')
 let zoomDiv=document.querySelector('.zoom-div')
 let zoomDivImg = document.querySelector('.zoom-div img')
+let big = document.querySelector('.big')
+let imgArr=['58bd2e0baadde197.jpg.avif','d9041cf272d70260.jpg.avif','f3d19923bfbd63fe.jpg.avif','huawei1.jpg.avif','huawei2.jpg.avif','huawei3.jpg.avif','huawei4.jpg.avif']
 prev.onclick=function() {
     ul.style.left="0";
     prev.style.background='url(./images/disabled-prev.png)'
@@ -25,6 +27,8 @@ for(let i =0;i<lis.length;i++) {
         }
         lis[i].className='img-hover'
         Bigimg.src=lis[i].children[0].src;
+        big.src='./images//'+imgArr[i]
+
     }
 }
 mianImg.onmouseover=function(){

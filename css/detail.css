@@ -12,13 +12,13 @@
 .preview-wrap{
     width: 352px;
     height: 500px;
-    background-color: aqua;
+   
     padding-bottom: 15px;
     float: left;
 
 }
 .itemInfo-wrap{
-    width: 590px;
+    width: 738px;
     height: 800px;
     margin-left: 30px;
     margin-right: 24px;
@@ -47,7 +47,7 @@
     width: 352px;
     height: 54px;
     margin-bottom: 18px;
-    background-color: beige;
+   
 }
 .prev, .next{
 position: absolute;
@@ -133,12 +133,14 @@ background: url(../images/__sprite.png  ) no-repeat;
     background-color: chartreuse;
 }
 .choose-amount{
-    position: relative;
+    position: absolute;
     width: 58px;
     height: 44px;
     border: 1px solid #ccc;
     margin-right: 10px;
     background-color: aqua;
+   right: 49.1%;
+   top: 36.5%;
 }
 .buy-num{
     text-align: center;
@@ -147,7 +149,7 @@ background: url(../images/__sprite.png  ) no-repeat;
     padding: 1px 2px;
     line-height: 42px;
     position: absolute;
-    top: 1px;
+    
     border: 0;
     left: 0;
 }
@@ -174,4 +176,191 @@ background: url(../images/__sprite.png  ) no-repeat;
 .disabled{
     color: #ccc;
     cursor: not-allowed;
+}
+.car{
+    position: absolute;
+    right: 44%;
+    top:37%;
+}
+/* .sku-name{
+    font: 700 16px Arial,"microsoft yahei";
+    color: #666;
+    padding-top: 10px;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+.news{
+    color: #e4393c;
+    margin-bottom: 5px;
+}
+.item{
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 618px;
+    max-height: 1.5em;
+    line-height: 1.5em;
+}
+.summary{
+    position: relative;
+    padding-bottom: 5px;
+}
+.summary-price-wrap{
+    padding: 10px 0 0;
+    background: #f3f3f3;
+}
+.summary-price{
+    position: relative;
+    margin-bottom: 5px;
+}
+.dt{
+    float: left;
+    padding-left: 10px;
+    font-family: simsun;
+    color: #999;
+    line-height: 22px;
+    font-size: 12px;
+}
+.dd{
+    margin-left: 70px;
+}
+.p-price{
+    color: #e4393c;
+    font-family: "microsoft yahei";
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.price{
+    font-size: 22px;
+}
+    
+
+.clearfix::after{
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+.li{
+    margin-bottom: 3px;
+    line-height: 32px;
+    display: inline-block;
+    display: block;
+}
+.lh{
+    zoom: 1;
+}
+.li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.item{
+    float: left;
+    color: #666;
+    background-color: #fff;
+    margin-right: 7px;
+    margin-bottom: 4px;
+    background-color: #f7f7f7;
+}
+.item img{
+    width: 40px;height: 40px;aspect-ratio: auto 40 / 40;
+     
+        border: 0;
+        vertical-align: middle;
+    
+}
+.item a i {
+    font-style: normal;
+    margin: 0 8px;
+} */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+main {
+   height: 600px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-images {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.product-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-images img:hover {
+    transform: scale(1.1);
+}
+
+.product-details {
+    flex: 1;
+}
+
+h2 {
+    color: #e44d26;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #e44d26;
+}
+
+.description {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e44d26;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #d6401f;
 }
