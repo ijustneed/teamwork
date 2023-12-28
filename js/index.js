@@ -154,8 +154,8 @@ recommendImge3.onmouseout=function(){
     }
  }
  //获取用户昵称
+ let username = window.localStorage.getItem('nickname')
 
- let nickname = window.localStorage.getItem('nickname')
  let miaosha = document.querySelector('.miaosha')
  let search = document.querySelector('.search')
  let searchM = document.querySelector('.search-m')
@@ -163,6 +163,7 @@ recommendImge3.onmouseout=function(){
  let searchLogo = document.querySelector('.search_logo')
  //楼层滚动 文字变色
  let header = document.querySelector('.header')
+ let nickname=document.querySelector('.nickname')
  let banner = document.querySelector('.banner')
  let elevator = document.querySelector('.elevator')
  let items =   document.querySelectorAll(".content .item")
@@ -221,12 +222,17 @@ document.onscroll=function () {
         elevatorA[3].style.color = 'red'
     }
  }
- window.onloa=function() {
+ window.onload=function() {
+    
     function loadNickName() {
-     miaosha.innerHTML='<p>'+nickname+'</p>'
+        
+        nickname.innerText='Hi~欢迎'+username
         
     }
-    loadNickName()
+    if(username!=''){
+        loadNickName()
+    }
+    
     
  }
  //秒杀倒计时
@@ -250,4 +256,9 @@ document.onscroll=function () {
         Rsecond.innerHTML=second
     }
  },1000)
+
+
+ 
+ 
+
 

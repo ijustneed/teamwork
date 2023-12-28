@@ -20,21 +20,22 @@
     <div class="wrapper">
         <div style="margin: 200px auto;background-color: #fff;width:350px ;height: 340px;padding: 20px;border-radius: 10px;">
             <div style="margin: 20px; text-align: center;font-size: 24px;"><b>登录</b></div>
-            
+                
                 <div class="form-group">
                     
                   <label for="loadusername">用户名</label>
-                  <input type="text" class="form-control" id="username"  placeholder="Enter email">
+                  <input type="text" class="form-control" id="username"  >
                   
                 </div>
                 <div class="form-group">
                   <label for="loadpassword">密码</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password">
+                  <input type="password" class="form-control" id="password" >
                 </div>
                 
                 <div id="bottom">
                   <button  class="btn btn-primary" onclick="check()">登录</button>
                   <button  type="reset" class="btn btn-danger" style="margin-left:10px ;">重置</button>
+                  <a href="register.html" style="align-items: center; margin-top: 5px;margin-left: 50px;">点击注册</a>
                 </div>
                 
              
@@ -62,15 +63,15 @@
     let username = document.getElementById('username').value
     let password = document.getElementById('password').value
     
-    if (username==123&&password=='xxx') {
+    if (username==localStorage.getItem('username')&&password==localStorage.getItem('password')) {
       window.location.replace("index.html")
      
      
     }else {
-      alert('wrong')
+      alert('用户名或密码有误')
     }
-    window.localStorage.setItem('username',username)
-    window.localStorage.setItem('password',password)
+    // window.localStorage.setItem('username',username)
+    // window.localStorage.setItem('password',password)
   }
 
   

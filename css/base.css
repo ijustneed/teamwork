@@ -179,7 +179,7 @@ header a {
 }
 footer {
 	margin-top: 35px;
-	height: 560px;
+	
 	background-color: #eaeaea;
 }
 footer a {
@@ -197,14 +197,14 @@ footer a {
 	line-height: 43px;
 	float: left;
 }
-.service li h5 {
+/* .service li h5 {
 	position: absolute;
 	top: 0;
 	left: 38px;
 	width: 36px;
 	height: 43px;
 	background: url(../images/ico.png) no-repeat;
-}
+} */
 .service li:nth-child(2) h5 {
 	background-position: 0 -43px;
 }
@@ -237,11 +237,11 @@ footer a {
 .help dd {
 	height: 22px;
 }
-.coverage {
+/* .coverage {
 	width: 200px;
 	height: 150px;
 	background: url(../images/ico_footer.png) no-repeat;
-}
+} */
 .coverage h5 {
 	padding-left: 35px;
 }
@@ -272,13 +272,13 @@ footer a {
 .copyright div {
 	margin-top: 22px;
 }
-.foot-icon a {
+/* .foot-icon a {
 	display: inline-block;
 	width: 103px;
 	height: 33px;
 	background: url(../images/ico_footer.png) no-repeat 0 -150px;
 	margin: 20px 4px 0;
-}
+} */
 .foot-icon a:nth-child(2) {
 	background-position: -103px -150px;
 }
@@ -303,7 +303,7 @@ footer a {
 	.logo a {
 		width: 190px;
 		height: 120px;
-		background: #fff url(../images/biglogo.png) no-repeat;
+		background: #fff url(../images/logo.png) no-repeat;
 	}
 }
 @media only screen and (max-width: 323px) {
@@ -321,12 +321,12 @@ footer a {
 	.logo {
 		left: 10px;
 	}
-	.logo a {
+	/* .logo a {
 		width: 70px;
 		height: 42px;
 		background: #fff url(../images/smalllogo.png) no-repeat;
 		background-size: 70px 42px;
-	}
+	} */
 	.form {
 		width: 208px;
 		height: 36px;

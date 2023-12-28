@@ -18,13 +18,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <div style="margin: 200px auto;background-color: #fff;width:350px ;height: 400px;padding: 20px;border-radius: 10px;">
-            <div style="margin: 20px; text-align: center;font-size: 24px;"><b>登录</b></div>
+        <div style="margin: 200px auto;background-color: #fff;width:350px ;height: 500px;padding: 20px;border-radius: 10px;">
+            <div style="margin: 20px; text-align: center;font-size: 24px;"><b>注册</b></div>
             
                 <div class="form-group">
                     
                   <label for="loadusername">用户名</label>
-                  <input type="text" class="form-control" id="username"  placeholder="Enter email">
+                  <input type="text" class="form-control" id="username" >
                   
                 </div>
                 <div>
@@ -33,12 +33,16 @@
                 </div>
                 <div class="form-group">
                   <label for="loadpassword">密码</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password">
+                  <input type="password" class="form-control" id="password" >
+                </div>
+                <div class="form-group">
+                  <label for="loadpassword">再次输入密码</label>
+                  <input type="password" class="form-control" id="repassword" >
                 </div>
                 
                 <div id="bottom">
-                  <button  class="btn btn-primary" onclick="check()">登录</button>
-                  <button  type="reset" class="btn btn-danger" style="margin-left:10px ;">重置</button>
+                  <button  class="btn btn-primary" onclick="check()">确认</button>
+                  <button  type="reset" class="btn btn-danger" style="margin-left:10px ;" onclick="reset()">重置</button>
                 </div>
                 
              
@@ -61,12 +65,31 @@
    }
 </style>
 <script>
+   let count=0;
   function check(){
-
+    let username = document.querySelector('#username').value
+  let password = document.querySelector('#password').value
    let nickname=document.querySelector('#nickname').value
-   window.localStorage.setItem('nickname',nickname)
-   window.location.replace("index.html")
-  }
+   let repassword=document.querySelector('#repassword').value
+   if (!/^[a-zA-Z][a-zA-Z0-9]*$/.test(username) || username.length < 6) {
+              alert('用户名非法且用户名长度至少为6位');
+              count=1
+                return;
+          }
+    if(password!=repassword) {
+        alert('两次输入的密码不一致')
+        count =1
+    }
 
+    if(count==0) {
+      window.localStorage.setItem('nickname',nickname)
+   window.localStorage.setItem('username',username)
+   window.localStorage.setItem('password',password)
+   window.location.replace("login.html")
+    }
+   
+  }
+  
+  
   
 </script>
