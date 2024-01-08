@@ -154,7 +154,7 @@ recommendImge3.onmouseout=function(){
     }
  }
  //获取用户昵称
- let username = window.localStorage.getItem('nickname')
+
 
  let miaosha = document.querySelector('.miaosha')
  let search = document.querySelector('.search')
@@ -170,6 +170,7 @@ recommendImge3.onmouseout=function(){
  let elevatorA =   document.querySelectorAll(".elevator a")
  let elevatorArr = [];
  let base = header.offsetHeight+banner.offsetHeight;
+ let username = window.localStorage.getItem('nickname')
  console.log(base)
  for(let i =0;i<items.length;i++) {
     base = base +items[i].offsetHeight
